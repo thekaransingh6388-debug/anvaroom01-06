@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes">
   <title>JEET SHAH | Forex & Crypto Trading Signals</title>
   
-  <!-- Meta Pixel Code - Pixel ID: 976725448671345 -->
+  <!-- Meta Pixel Code - CORRECT PIXEL ID: 976725448671345 -->
   <script>
     !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.bq=function(){n.callMethod?
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
     n.callMethod.apply(n,arguments):n.queue.push(arguments)};
     if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
     n.queue=[];t=b.createElement(e);t.async=!0;
@@ -83,7 +83,7 @@
       height: 110px;
       object-fit: cover;
       border-radius: 60px;
-      border: 2.5px linear-gradient(135deg, #ef4444, #facc15);
+      border: 2.5px solid #ef4444;
       transition: transform 0.2s;
     }
     .logo-img:hover {
@@ -200,7 +200,7 @@
       align-items: center;
       justify-content: center;
       gap: 12px;
-      background: linear-gradient(135deg, #b91c1c, #991b1b);
+      background: linear-gradient(135deg, #dc2626, #b91c1c);
       border: none;
       padding: 16px 18px;
       border-radius: 60px;
@@ -222,7 +222,7 @@
       filter: drop-shadow(0 1px 1px black);
     }
     .telegram-btn:hover {
-      background: linear-gradient(135deg, #991b1b, #7f1a1a);
+      background: linear-gradient(135deg, #b91c1c, #991b1b);
       transform: scale(1.01);
       box-shadow: 0 18px 25px -12px black;
       border-bottom-color: #ffd966;
@@ -231,11 +231,11 @@
       transform: scale(0.98);
     }
     .btn-second {
-      background: linear-gradient(135deg, #b91c1c, #991b1b);
+      background: linear-gradient(135deg, #dc2626, #b91c1c);
       border-bottom: 2px solid #facc15;
     }
     .btn-second:hover {
-      background: linear-gradient(135deg, #991b1b, #7f1a1a);
+      background: linear-gradient(135deg, #b91c1c, #991b1b);
     }
 
     /* Live Pulse */
@@ -418,7 +418,7 @@
   ✅ CORRECT Telegram Link: https://t.me/+KWT6H95TFzAxY2Vl
   ✅ Tracks both Subscribe buttons with multiple events
   ✅ Scroll Depth, Time on Page, Engagement tracking included
-  ✅ Forex/Crypto specific event parameters
+  ✅ Fixed all syntax errors and duplicate script tags
 -->
 
 <script>
@@ -533,7 +533,6 @@
     function attachButtonTracking() {
       const topBtn = document.querySelector('.main-join-btn');
       const bottomBtn = document.querySelector('.secondary-join-btn');
-      const allTelegramBtns = document.querySelectorAll('.telegram-btn');
       
       let isProcessing = false;
       const DEBOUNCE_MS = 600;
@@ -560,13 +559,6 @@
       
       attachToButton(topBtn, 'primary_top_button_red_gold', 'JOIN_TELEGRAM_CHANNEL_FOREX_CRYPTO');
       attachToButton(bottomBtn, 'secondary_bottom_button_red_gold', 'GET_FREE_SIGNALS_JOIN_NOW');
-      
-      // Also track any other telegram links as fallback
-      allTelegramBtns.forEach(btn => {
-        if (btn !== topBtn && btn !== bottomBtn) {
-          attachToButton(btn, 'fallback_telegram_link', 'Telegram_Join_Fallback_Forex');
-        }
-      });
     }
     
     // Scroll Depth Tracking
