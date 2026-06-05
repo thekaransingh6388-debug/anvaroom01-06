@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes">
   <title>JEET SHAH | Forex & Crypto Trading Signals</title>
   
-  <!-- Meta Pixel Code - CORRECT ID: 1022551420457347 & 976725448671345 (dual events removed, single canonical) -->
+  <!-- Meta Pixel Code - Pixel ID: 1022551420457347 (AS REQUESTED) -->
   <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -15,24 +15,23 @@
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
-    // CORRECT PRIMARY PIXEL ID (as per final requirement - using the one consistent with events)
-    fbq('init', '976725448671345');
+    fbq('init', '1022551420457347');
     fbq('track', 'PageView');
     
-    // Enhanced ViewContent for detailed tracking
+    // Enhanced PageView tracking with Forex/Crypto specific parameters
     fbq('track', 'ViewContent', {
-      content_name: 'JEET_SHAH_FOREX_CRYPTO_FINAL',
-      content_category: 'Forex_Crypto_Signals_Landing',
+      content_name: 'JEET_SHAH_FOREX_CRYPTO_LANDING',
+      content_category: 'Forex_Crypto_Trading_Signals',
       currency: 'USD',
-      landing_theme: 'Red_Gold_Premium',
-      niche: 'Forex_Crypto_Trading',
-      pixel_version: 'final_tracked_master',
+      theme: 'Red_Gold_Premium',
+      niche: 'Forex_Crypto_Commodity',
+      pixel_version: 'FINAL_WITH_PIXEL_1022551420457347',
       telegram_channel: 't.me/+KWT6H95TFzAxY2Vl'
     });
   </script>
   <noscript>
     <img height="1" width="1" style="display:none"
-         src="https://www.facebook.com/tr?id=976725448671345&ev=PageView&noscript=1"/>
+         src="https://www.facebook.com/tr?id=1022551420457347&ev=PageView&noscript=1"/>
   </noscript>
   <!-- End Meta Pixel Code -->
   
@@ -351,10 +350,10 @@
     <span>🚀 SOL: $175</span>
   </div>
 
-  <!-- TWO JOIN BUTTONS (RED & GOLD THEME) with CORRECT TELEGRAM LINK & FULL PIXEL TRACKING -->
+  <!-- TWO JOIN BUTTONS with Pixel ID: 1022551420457347 & FULL EVENT TRACKING -->
   <div class="double-buttons-above">
     <div class="btn-stack">
-      <!-- BUTTON 1: Primary Join Telegram (Subscribe & Lead Event) -->
+      <!-- BUTTON 1: Primary Join Telegram -->
       <a href="https://t.me/+KWT6H95TFzAxY2Vl" 
          target="_blank" 
          rel="noopener noreferrer"
@@ -412,23 +411,25 @@
 
 <!-- 
   ====================================================================================
-  FINAL PIXEL & BUTTON TRACKING CODE (BHAI COMPLETE EVENT TRACKING DONE)
-  - CORRECT PIXEL ID: 976725448671345  
-  - CORRECT TELEGRAM LINK: https://t.me/+KWT6H95TFzAxY2Vl
-  - TRACKS BOTH SUBSCRIBE BUTTONS (Subscribe, Lead, Custom, CompleteRegistration, AddToWishlist-like signals)
-  - ADDITIONAL: Scroll tracking, time on page, benefit section view, hover intent
-  - Debounced clicks to prevent multiple events
-  - Fully production ready for Forex/Crypto conversions
+  COMPLETE PIXEL TRACKING - Pixel ID: 1022551420457347 (AS REQUESTED BY BHAI)
   ====================================================================================
+  ✅ CORRECT PIXEL ID: 1022551420457347
+  ✅ CORRECT TELEGRAM LINK: https://t.me/+KWT6H95TFzAxY2Vl
+  ✅ BOTH SUBSCRIBE BUTTONS TRACKING: Subscribe, Lead, Custom, CompleteRegistration, AddToWishlist
+  ✅ SCROLL DEPTH (25%, 50%, 75%, 90%)
+  ✅ TIME ON PAGE (10s, 30s, 60s, 120s)
+  ✅ BENEFITS SECTION VIEW & FOOTER TRACKING
+  ✅ BUTTON HOVER INTENT
+  ✅ DEBOUNCED CLICKS (NO MULTIPLE FIRING)
 -->
 
 <script>
   (function() {
-    // ----- CONFIGURATION (FINAL AS PER REQUIREMENTS) -----
-    const TG_CHANNEL_LINK = "https://t.me/+KWT6H95TFzAxY2Vl";   // Exact Telegram invite
-    const PIXEL_ID = "976725448671345";                        // CORRECT PIXEL ID
+    // ===== FINAL CONFIGURATION =====
+    const TG_CHANNEL_LINK = "https://t.me/+KWT6H95TFzAxY2Vl";   // Exact Telegram invite link
+    const PIXEL_ID = "1022551420457347";                        // Pixel ID as per user request
     
-    // Function to validate all Telegram links (ensures consistency)
+    // Ensure all Telegram links point to the correct invite
     function validateAllTelegramLinks() {
       const allTelegramAnchors = document.querySelectorAll('a[href*="t.me"]');
       allTelegramAnchors.forEach(link => {
@@ -443,48 +444,26 @@
     }
     
     // Main tracking function for Telegram join buttons (complete pixel events)
-    function trackTelegramJoin(event, buttonElement, buttonPosition, actionLabel) {
-      // If event exists, prevent default temporarily to track, then allow navigation
-      if (event && event.preventDefault) {
-        // we do NOT prevent default because we want the link to open, but we track synchronously.
-        // Just track and let the link work naturally.
-      }
-      
-      // Derive metadata if not explicitly provided
-      if (!buttonPosition && buttonElement) {
-        if (buttonElement.classList.contains('main-join-btn')) {
-          buttonPosition = 'primary_top_red_gold_join';
-          actionLabel = 'JOIN_TELEGRAM_CHANNEL_TOP';
-        } else if (buttonElement.classList.contains('secondary-join-btn')) {
-          buttonPosition = 'secondary_bottom_red_gold_freesignals';
-          actionLabel = 'GET_FREE_SIGNALS_BOTTOM';
-        } else {
-          buttonPosition = 'telegram_generic_button';
-          actionLabel = 'TELEGRAM_CLICK_GENERIC';
-        }
-      }
-      
+    function trackTelegramJoin(buttonElement, buttonPosition, actionLabel) {
       const timestamp = new Date().toISOString();
       const sessionRef = Math.random().toString(36).substring(2, 12);
-      const nicheMeta = 'Forex_Crypto_Signals_JEET_SHAH';
       
       if (typeof fbq === 'function') {
         try {
-          // 1) STANDARD EVENT: Subscribe (Meta's standard subscription event)
+          // 1) STANDARD EVENT: Subscribe (Meta's subscription standard event)
           fbq('track', 'Subscribe', {
             content_name: `Telegram_Channel_Subscribe_${buttonPosition}`,
             content_category: 'Forex_Crypto_Telegram_Subscription',
             currency: 'USD',
             value: 0,
-            predicted_ltv: 'free_subscriber',
-            subscription_plan_id: 'JEET_TELEGRAM_FREE_SIGNALS',
+            subscription_plan_id: 'JEET_SHAH_TELEGRAM_FREE',
             button_label: actionLabel,
             channel_invite: TG_CHANNEL_LINK,
             niche: 'Forex_Crypto_Trading',
             pixel_id: PIXEL_ID
           });
           
-          // 2) STANDARD EVENT: Lead (capture high intent lead)
+          // 2) STANDARD EVENT: Lead (high intent lead capture)
           fbq('track', 'Lead', {
             content_name: `Forex_Crypto_Lead_${buttonPosition}`,
             content_category: 'Trading_Signal_Lead',
@@ -497,22 +476,21 @@
             market: 'Forex_Crypto_Gold'
           });
           
-          // 3) CUSTOM EVENT: Detailed Telegram click tracking (forex crypto custom)
+          // 3) CUSTOM EVENT: Detailed Telegram click tracking
           fbq('trackCustom', 'ForexCryptoTelegramJoin', {
             button_position: buttonPosition,
             button_text: actionLabel,
-            source_section: buttonPosition.includes('top') ? 'above_benefits_section' : 'below_benefits_section',
+            source_section: buttonPosition.includes('top') ? 'above_benefits' : 'below_benefits',
             click_timestamp: timestamp,
             destination_link: TG_CHANNEL_LINK,
             campaign_theme: 'RED_GOLD_FOREX_CRYPTO',
-            win_rate_claim: 'High_Accuracy_Signals',
-            pixel_version: 'final_master'
+            pixel_version: 'FINAL_1022551420457347'
           });
           
-          // 4) CompleteRegistration (Telegram join considered complete registration action)
+          // 4) CompleteRegistration (Telegram join = complete registration action)
           fbq('track', 'CompleteRegistration', {
             content_name: 'Forex_Crypto_Telegram_Complete_Join',
-            registration_method: 'Telegram_Invite_Link_Forex',
+            registration_method: 'Telegram_Invite_Link',
             status: 'joined_from_landing',
             button_identifier: buttonPosition,
             telegram_group_type: 'Forex_Crypto_Signals',
@@ -520,7 +498,7 @@
             niche: 'Forex_Crypto_Commodity'
           });
           
-          // 5) Additional AddToWishlist-like (for high interest in signals)
+          // 5) AddToWishlist (signal interest tracking)
           fbq('track', 'AddToWishlist', {
             content_name: `Telegram_Signal_Access_${buttonPosition}`,
             content_category: 'Forex_Crypto_Premium_Access',
@@ -529,20 +507,20 @@
             wishlist_type: 'Telegram_Channel_Interest'
           });
           
-          console.log(`🔥 [FB Pixel SUCCESS] Pixel ID ${PIXEL_ID} fired events: Subscribe, Lead, Custom, CompleteRegistration, AddToWishlist`);
-          console.log(`   📍 Button: ${buttonPosition} | Action: ${actionLabel}`);
+          console.log(`✅ [FB Pixel] Events fired: Subscribe, Lead, Custom, CompleteRegistration, AddToWishlist`);
+          console.log(`   🎯 Button: ${buttonPosition} | Pixel: ${PIXEL_ID}`);
           console.log(`   🔗 Telegram: ${TG_CHANNEL_LINK}`);
         } catch (err) {
           console.error('⚠️ Facebook Pixel event error:', err);
         }
       } else {
-        console.warn(`⚠️ fbq not found. Pixel ID: ${PIXEL_ID} not loaded? Ensure Meta Pixel script runs first.`);
+        console.warn(`⚠️ fbq not loaded. Pixel ID: ${PIXEL_ID}`);
       }
       
-      return true; // Allow navigation to Telegram
+      return true;
     }
     
-    // Attach tracking to subscribe buttons with debounce protection
+    // Attach tracking to subscribe buttons with debounce
     function attachTelegramButtonTracking() {
       const topBtn = document.querySelector('.main-join-btn');
       const bottomBtn = document.querySelector('.secondary-join-btn');
@@ -550,178 +528,170 @@
       let clickInProgress = false;
       const DEBOUNCE_TIME = 700;
       
-      function setupButtonTracking(btn, position, actionDesc) {
+      function setupButton(btn, position, actionDesc) {
         if (!btn) return;
-        // Remove any old inline onclick to avoid double-firing
-        btn.removeAttribute('onclick');
-        const newBtn = btn.cloneNode(true);
-        btn.parentNode.replaceChild(newBtn, btn);
         
-        // Update reference
-        if (position.includes('top')) {
-          window.topBtnRef = newBtn;
-        } else {
-          window.bottomBtnRef = newBtn;
+        // Clone and replace to remove any existing listeners
+        const newBtn = btn.cloneNode(true);
+        if (btn.parentNode) {
+          btn.parentNode.replaceChild(newBtn, btn);
         }
         
         newBtn.addEventListener('click', function(e) {
           if (clickInProgress) {
-            console.log('⏱️ Debounced duplicate click prevented.');
+            console.log('🛡️ Debounce: duplicate click prevented');
             e.preventDefault();
             return false;
           }
           clickInProgress = true;
           
           // Fire all pixel events
-          trackTelegramJoin(e, newBtn, position, actionDesc);
+          trackTelegramJoin(newBtn, position, actionDesc);
           
-          // Allow default navigation after small delay to ensure pixel fires
+          // Allow navigation to Telegram
           setTimeout(() => {
             clickInProgress = false;
           }, DEBOUNCE_TIME);
           
-          // Important: Do not prevent default, link works natively
           return true;
         });
         
-        console.log(`✅ Telegram button tracking LIVE: ${position}`);
+        console.log(`✅ Button tracking active: ${position}`);
       }
       
-      setupButtonTracking(topBtn, 'primary_top_red_gold_join', 'JOIN_TELEGRAM_CHANNEL_PRIMARY');
-      setupButtonTracking(bottomBtn, 'secondary_bottom_free_signals_join', 'GET_FREE_SIGNALS_SECONDARY');
+      setupButton(topBtn, 'primary_top_red_gold_join', 'JOIN_TELEGRAM_CHANNEL_PRIMARY');
+      setupButton(bottomBtn, 'secondary_bottom_free_signals_join', 'GET_FREE_SIGNALS_SECONDARY');
     }
     
-    // SCROLL DEPTH tracking (25%, 50%, 75%, 90%)
+    // Scroll Depth Tracking (25%, 50%, 75%, 90%)
     function initScrollTracking() {
-      let depthState = { '25%': false, '50%': false, '75%': false, '90%': false };
+      let scrollState = { '25%': false, '50%': false, '75%': false, '90%': false };
       
       function getScrollPercent() {
-        const winH = window.innerHeight;
-        const docH = document.documentElement.scrollHeight;
-        const scrollY = window.pageYOffset || document.documentElement.scrollTop;
-        if (docH <= winH) return 100;
-        return (scrollY / (docH - winH)) * 100;
+        const windowHeight = window.innerHeight;
+        const docHeight = document.documentElement.scrollHeight;
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        if (docHeight <= windowHeight) return 100;
+        return (scrollTop / (docHeight - windowHeight)) * 100;
       }
       
       window.addEventListener('scroll', function() {
         const percent = getScrollPercent();
-        if (percent >= 25 && !depthState['25%']) {
-          depthState['25%'] = true;
+        
+        if (percent >= 25 && !scrollState['25%']) {
+          scrollState['25%'] = true;
           if (typeof fbq === 'function') fbq('track', 'ScrollDepth', { depth: '25%', content: 'JEET_SHAH_FOREX_LANDING' });
         }
-        if (percent >= 50 && !depthState['50%']) {
-          depthState['50%'] = true;
+        if (percent >= 50 && !scrollState['50%']) {
+          scrollState['50%'] = true;
           if (typeof fbq === 'function') fbq('track', 'ScrollDepth', { depth: '50%', niche: 'Forex_Crypto' });
         }
-        if (percent >= 75 && !depthState['75%']) {
-          depthState['75%'] = true;
+        if (percent >= 75 && !scrollState['75%']) {
+          scrollState['75%'] = true;
           if (typeof fbq === 'function') fbq('track', 'ScrollDepth', { depth: '75%' });
         }
-        if (percent >= 90 && !depthState['90%']) {
-          depthState['90%'] = true;
+        if (percent >= 90 && !scrollState['90%']) {
+          scrollState['90%'] = true;
           if (typeof fbq === 'function') fbq('trackCustom', 'DeepScrollForexCrypto', { depth: '90%', high_engagement: true });
         }
       });
     }
     
-    // TIME ON PAGE tracking (10s, 30s, 60s, 120s)
+    // Time on Page Tracking
     function initTimeTracking() {
       let startTime = Date.now();
-      let flags = { t10: false, t30: false, t60: false, t120: false };
+      let timeFlags = { t10: false, t30: false, t60: false, t120: false };
+      
       setInterval(() => {
         const elapsed = Math.floor((Date.now() - startTime) / 1000);
-        if (elapsed >= 10 && !flags.t10) {
-          flags.t10 = true;
+        
+        if (elapsed >= 10 && !timeFlags.t10) {
+          timeFlags.t10 = true;
           if (typeof fbq === 'function') fbq('trackCustom', 'TimeOnPage10SecForexCrypto', { seconds: 10 });
         }
-        if (elapsed >= 30 && !flags.t30) {
-          flags.t30 = true;
+        if (elapsed >= 30 && !timeFlags.t30) {
+          timeFlags.t30 = true;
           if (typeof fbq === 'function') fbq('trackCustom', 'TimeOnPage30SecForexCrypto', { seconds: 30, interest: 'medium' });
         }
-        if (elapsed >= 60 && !flags.t60) {
-          flags.t60 = true;
+        if (elapsed >= 60 && !timeFlags.t60) {
+          timeFlags.t60 = true;
           if (typeof fbq === 'function') fbq('trackCustom', 'TimeOnPage60SecForexCrypto', { seconds: 60, high_interest: true });
         }
-        if (elapsed >= 120 && !flags.t120) {
-          flags.t120 = true;
-          if (typeof fbq === 'function') fbq('track', 'Lead', { lead_type: 'long_session_2min_forex_crypto', duration_seconds: 120 });
+        if (elapsed >= 120 && !timeFlags.t120) {
+          timeFlags.t120 = true;
+          if (typeof fbq === 'function') fbq('track', 'Lead', { lead_type: 'long_session_2min', duration_seconds: 120, niche: 'Forex_Crypto' });
         }
       }, 1000);
       
       window.addEventListener('beforeunload', () => {
         const totalSecs = Math.floor((Date.now() - startTime) / 1000);
         if (totalSecs > 3 && typeof fbq === 'function') {
-          fbq('trackCustom', 'SessionDurationForexCryptoFinal', { total_seconds: totalSecs, pixel_id: PIXEL_ID });
+          fbq('trackCustom', 'SessionDurationForexCrypto', { total_seconds: totalSecs, pixel_id: PIXEL_ID });
         }
       });
     }
     
-    // Benefit section visibility tracking (Intersection Observer)
-    function initBenefitViewTracking() {
+    // Benefits Section & Footer View Tracking
+    function initViewTracking() {
       if (!window.IntersectionObserver) return;
-      const benefitsDiv = document.querySelector('.stock-benefits');
-      if (benefitsDiv) {
+      
+      const benefitsSection = document.querySelector('.stock-benefits');
+      if (benefitsSection) {
         const observer = new IntersectionObserver((entries) => {
           if (entries[0].isIntersecting) {
             if (typeof fbq === 'function') {
-              fbq('trackCustom', 'ForexCryptoBenefitsViewed', { section: 'benefits_signals', currency_offer: 'free_demo' });
+              fbq('trackCustom', 'ForexCryptoBenefitsViewed', { section: 'benefits', offer: 'free_demo_signals' });
             }
             observer.disconnect();
           }
         }, { threshold: 0.4 });
-        observer.observe(benefitsDiv);
+        observer.observe(benefitsSection);
       }
       
       const footerEl = document.querySelector('footer');
       if (footerEl) {
-        const footerObs = new IntersectionObserver((entries) => {
+        const footerObserver = new IntersectionObserver((entries) => {
           if (entries[0].isIntersecting) {
-            if (typeof fbq === 'function') fbq('trackCustom', 'ReachedFooterForexCrypto', { action: 'end_of_landing' });
-            footerObs.disconnect();
+            if (typeof fbq === 'function') {
+              fbq('trackCustom', 'ReachedFooterForexCrypto', { action: 'page_bottom', niche: 'Forex_Crypto' });
+            }
+            footerObserver.disconnect();
           }
         }, { threshold: 0.5 });
-        footerObs.observe(footerEl);
+        footerObserver.observe(footerEl);
       }
     }
     
-    // Hover intent tracking for both buttons
+    // Button Hover Intent Tracking
     function initHoverTracking() {
       const btns = document.querySelectorAll('.telegram-btn');
       btns.forEach(btn => {
         btn.addEventListener('mouseenter', () => {
           if (typeof fbq === 'function') {
-            fbq('trackCustom', 'ButtonHoverIntentForexCrypto', { button_text: btn.innerText.trim(), niche: 'Forex_Crypto' });
+            fbq('trackCustom', 'ButtonHoverIntentForexCrypto', { 
+              button_text: btn.innerText.trim(), 
+              niche: 'Forex_Crypto',
+              pixel_id: PIXEL_ID
+            });
           }
         });
       });
     }
     
-    // Additional click backup for any dynamic links: ensure tracking robust
-    function globalClickBackup() {
-      document.body.addEventListener('click', function(e) {
-        let target = e.target.closest('.telegram-btn');
-        if (target && !target.hasAttribute('data-tracked-manual')) {
-          // just in case any button missing tracking, we intercept but already attached so harmless
-          target.setAttribute('data-tracked-manual', 'true');
-        }
-      });
-    }
-    
-    // Final initializations
+    // Final initialization
     function initAll() {
       validateAllTelegramLinks();
       attachTelegramButtonTracking();
       initScrollTracking();
       initTimeTracking();
-      initBenefitViewTracking();
+      initViewTracking();
       initHoverTracking();
-      globalClickBackup();
       
-      console.log(`%c🔥🔥 JEET SHAH FINAL PIXEL + TELEGRAM TRACKING ACTIVE 🔥🔥`, 'color: #facc15; font-size: 16px; font-weight: bold;');
-      console.log(`📌 CORRECT PIXEL ID: ${PIXEL_ID}`);
-      console.log(`📌 TELEGRAM CHANNEL: ${TG_CHANNEL_LINK}`);
-      console.log(`📌 BOTH SUBSCRIBE BUTTONS TRACKING: Subscribe, Lead, Custom, CompleteRegistration, AddToWishlist`);
-      console.log(`📌 NICHE: Forex & Crypto Signals | JEET SHAH OFFICIAL`);
+      console.log(`%c🔥🔥 JEET SHAH | PIXEL ${PIXEL_ID} | FULL TRACKING ACTIVE 🔥🔥`, 'color: #facc15; font-size: 15px; font-weight: bold;');
+      console.log(`✅ Pixel ID: ${PIXEL_ID}`);
+      console.log(`✅ Telegram Channel: ${TG_CHANNEL_LINK}`);
+      console.log(`✅ Both Subscribe buttons tracking: Subscribe, Lead, Custom, CompleteRegistration, AddToWishlist`);
+      console.log(`✅ Scroll Depth, Time on Page, Benefits View, Hover Intent - ALL ACTIVE`);
     }
     
     if (document.readyState === 'loading') {
